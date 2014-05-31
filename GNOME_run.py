@@ -68,7 +68,7 @@ import gnome
 from gnome.utilities.remote_data import get_datafile
 from gnome import scripting
 
-# define base directory
+# define base directory 
 
 base_dir = os.path.dirname(__file__)
 
