@@ -38,7 +38,7 @@ if os.path.isfile(dire+'wind/twdb_1c.tar'):
    with closing(tarfile.open(dire+'wind/twdb_1c.tar','r')) as t:
         t.extractall(dire+'wind/wind_data')
 
-# Step one to create wind.th---delet the first few lines of twdb051.wndq file and save it as wind1.th
+# Step one to create wind.th--delet the first few lines of twdb051.wndq file and save it as wind1.th
 
 string1='*'
 a=open(dire+'wind/wind_data/twdb051.wndq', 'r').readlines()   # read file in lines
