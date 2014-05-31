@@ -15,7 +15,7 @@ Created on Sun Jul 21 20:24:45 2013
 ## because of model a 7 days model spin-up (7 more days hindcasts), the data start time should be 7 days less than the model simulation start time
 timeperiod=['start:','07','14','2013','end:','07','23','2013']
 
-####### Wind #########
+####### Wind ##########
 # Download wind forecast data from "http://seawater.tamu.edu/tglopu/twdb_lc.tar" and save it at "D:/twdb_1c.tar".
 import os
 dire=os.path.dirname(__file__)
