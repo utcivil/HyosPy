@@ -30,7 +30,6 @@ HyosPy/
       /1/GNOME/
               /current.txt
               /coast.bna
-        /data.py
         /hotstart.in
         /run.sh
         /autocombine_MPI_elfe.pl
@@ -40,38 +39,40 @@ HyosPy/
       /2/GNOME/
               /current.txt
               /coast.bna
-              
-        /data.py
-        
         /hotstart.in
-        
         /run.sh
-        
         /autocombine_MPI_elfe.pl
-        
         /machines
-        
         /all the other mandatory SELFE inputs except 'param.in', 'wind.th', 'elev.th', and 'flux.th'
         
       ...
       
       /12/GNOME/
-      
                /current.txt
-              
                /coast.bna
-               
-         /data.py
-        
          /hotstart.in
-        
          /run.sh
-        
          /autocombine_MPI_elfe.pl
-         
          /machines
-        
          /all the other mandatory SELFE inputs except 'param.in', 'wind.th', 'elev.th', and 'flux.th'
+      
+      /hydro_wrapper.py
+      /data.py
+      /GNOME_run.py
+      /oilspill_wrapper.py
+      /multiple_models_with_multiple_points_v1.py
+      /upper_hydro_wrapper.py
+      /upper_oilspill_wrapper.py
+      /GE_animation.txt
+      /utools.py
+      /nctools.py
+      /169_hvel.nc
+      /param.in
+      /pyselfe_v1.py
+      /javascript.txt
+      /numpyIO.py
+      /drag.gr3
+      
         
        
         
