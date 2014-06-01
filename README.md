@@ -9,7 +9,9 @@ The current version of HyosPy has the following new features:
 
 2. The original RK4 has been replaced by the PyGNOME (the Linux version of GNOME) and it could run much more faster (more than 100X times faster) than the RK4.
 
-3. The PyGNOME was initiated based on the forecast current fields by SELFE and the wind force.
+3. The PyGNOME was initiated based on the forecast current fields by SELFE and also the wind force.
 
 4. The original 2D Google Map visualization tool has been updated to the 3D Google Earth interface, with which multiple oil spill forecast trajectories could be animated simultaneously. You may want to check it out the sample animation we have done at: https://www.youtube.com/watch?v=-5yNl0K6wJ4
 
+ddddd
+=====
