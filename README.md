@@ -25,30 +25,20 @@ Tutorial
 Below is an example of HyosPy structure with 12 SELFE embedded:
 
 
-1. HyosPy/
+HyosPy/
 
       /1/GNOME/
-      
               /current.txt
-              
               /coast.bna
-              
         /data.py
-        
         /hotstart.in
-        
         /run.sh
-        
         /autocombine_MPI_elfe.pl
-        
         /machines
-        
         /all the other mandatory SELFE inputs except 'param.in', 'wind.th', 'elev.th', and 'flux.th'
         
       /2/GNOME/
-      
               /current.txt
-              
               /coast.bna
               
         /data.py
@@ -67,20 +57,22 @@ Below is an example of HyosPy structure with 12 SELFE embedded:
       
       /12/GNOME/
       
-              /current.txt
+               /current.txt
               
-              /coast.bna
-              
-        /data.py
+               /coast.bna
+               
+         /data.py
         
-        /hotstart.in
+         /hotstart.in
         
-        /run.sh
+         /run.sh
         
-        /autocombine_MPI_elfe.pl
+         /autocombine_MPI_elfe.pl
+         
+         /machines
         
-        /machines
+         /all the other mandatory SELFE inputs except 'param.in', 'wind.th', 'elev.th', and 'flux.th'
         
-        /all the other mandatory SELFE inputs except 'param.in', 'wind.th', 'elev.th', and 'flux.th'
+       
         
      
