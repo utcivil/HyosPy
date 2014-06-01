@@ -13,5 +13,9 @@ The current version of HyosPy has the following new features:
 
 4. The original 2D Google Map visualization tool has been updated to the 3D Google Earth interface, with which multiple oil spill forecast trajectories could be animated simultaneously. You may want to check it out the sample animation we have done at: https://www.youtube.com/watch?v=-5yNl0K6wJ4
 
-ddddd
+Requirement
 -----
+1. Parallel SELFE with MPI protocol (v3.1dc) : http://www.stccmop.org/knowledge_transfer/software/selfe/sourcecode
+2. PyGNOME (Linux version of GNOME) : https://github.com/NOAA-ORR-ERD/GNOME2
+3. NetCDF library (4.3.0 or higher) : http://www.unidata.ucar.edu/downloads/netcdf/index.jsp
+4. Python (2.7.2 or higher)
