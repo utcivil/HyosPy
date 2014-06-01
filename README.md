@@ -73,7 +73,15 @@ HyosPy/
       /numpyIO.py
       /drag.gr3
       
-Notes that the SELFE run is based on a 7-day's spin-up so there is a 'hotstart.in' in each of the SELFE main folder to force SELFE hotstarts from a specified time step. 
+Notes:
+1. The SELFE run is based on a 7-day's spin-up so there is a 'hotstart.in' in each of the SELFE main folder to force SELFE hotstarts from a specified time step. Refer to 'combine_hotstart3.f90' from SELFE source code for the instruction of 'hotstart.in' generation.
+2. The 'run.sh' is the nexus between the real-time data and the executaion of SELFE. SO BE SURE to modify each of the 'run.sh' to match the specific SELFE run. For example: in /1, the SELFE hotstarts from time step 169 (based on 7-day's spin up--7*24=168) and done in step 216 (assume a 48 hr simulation), so the 'run.sh' for /1 should be:
+
+mpirun -np 2 --hostfile machines pelfe_3.1dc_sirius
+./autocombine_MPI_elfe.pl 169 216 0 2
+
+
+3. 
        
         
      
