@@ -96,8 +96,7 @@ Hydrodynamic simulation:
 
 Firstly, Modify arguments in upper_hydro_wrapper.py, for example:
 
-# 12 SELFE, 2-day's simulation (2+7=9), time step is 180 second, output elev, output wind, output hvel
-hydro_wrapper.change_param(12,9, 180, 1, 1, 1)  
+hydro_wrapper.change_param(12,9, 180, 1, 1, 1)  12 SELFE, 2-day's simulation (2+7=9), time step is 180 second, output elev, output wind, output hvel
 hydro_wrapper.change_data_time(12,12,14,2013,12,23,2013)
 hydro_wrapper.timer(15600)
 hydro_wrapper.runSELFE(12,10800)
