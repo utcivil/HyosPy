@@ -94,8 +94,9 @@ mpirun -np 2 --hostfile machines pelfe_3.1dc_sirius
 
 When all of the above are prepared, one only needs to modify the necessary argements in 'upper_hydro_wrapper.py' and run it, and so does the oil spill simulation with the control module -- 'upper_oilspill_wrapper.py'.
 
-
-
+Contacts:
+Xianlonghou@gmail.com
+hodges@mail.utexas.edu
  
         
      
