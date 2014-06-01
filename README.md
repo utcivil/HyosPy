@@ -24,7 +24,9 @@ Tutorial
 --------
 Below is an example of HyosPy structure with 12 SELFE embedded:
 
+
 HyosPy/
+
 
       /1/GNOME/
       
