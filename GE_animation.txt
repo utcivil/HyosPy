@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>GE_animation.kml</name>
+
+  <Style id="1">
+      <IconStyle>
+        <color>64000000</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+  
+  <Style id="2">
+      <IconStyle>
+        <color>641400FF</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="3">
+      <IconStyle>
+        <color>64780000</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="4">
+      <IconStyle>
+        <color>64FF78F0</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+  
+  <Style id="5">
+      <IconStyle>
+        <color>64FFFFFF</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+  
+  <Style id="6">
+      <IconStyle>
+        <color>64969696</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="7">
+      <IconStyle>
+        <color>64F00014</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="8">
+      <IconStyle>
+        <color>640078F0</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="9">
+      <IconStyle>
+        <color>64647800</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="10">
+      <IconStyle>
+        <color>64F0DC14</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="11">
+      <IconStyle>
+        <color>6414F05A</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+
+  <Style id="12">
+      <IconStyle>
+        <color>6414006E</color>
+        <scale>0.5</scale>
+        <Icon>
+          <href>http://www.clker.com/cliparts/N/z/y/R/g/l/white-circle-md.png</href>
+        </Icon>
+      </IconStyle>
+  </Style>
+  <styleUrl>#check-hide-children</styleUrl>
