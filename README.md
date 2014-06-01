@@ -24,7 +24,7 @@ Tutorial
 --------
 Below is an example of HyosPy structure with 12 SELFE embedded:
 
-HyosPy/
+HyosPy//
       /1/GNOME/
               /current.txt
               /coast.bna
