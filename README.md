@@ -73,7 +73,7 @@ HyosPy/
       /numpyIO.py
       /drag.gr3
       
-        
+Notes that the SELFE run is based on a 7-day's spin-up so there is a 'hotstart.in' in each of the SELFE main folder to force SELFE hotstarts from a specified time step. 
        
         
      
