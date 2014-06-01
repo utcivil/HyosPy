@@ -89,7 +89,8 @@ mpirun -np 2 --hostfile machines pelfe_3.1dc_sirius
 
 ./autocombine_MPI_elfe.pl 172 216 0 2
 
-3. 
+
+3. The '169_hvel.nc' in the main directory is used for NetCDF current fields congifureation for PyGNOME; the 'drag.gr3' is used for the grid structure extraction for the RK4 model.
        
         
      
