@@ -92,14 +92,9 @@ mpirun -np 2 --hostfile machines pelfe_3.1dc_sirius
 ./autocombine_MPI_elfe.pl 172 216 0 2
 
 
-Hydrodynamic simulation:
+When all of the above are prepared, one only needs to modify the necessary argements in 'upper_hydro_wrapper.py' and run it, and so does the oil spill simulation with the control module -- 'upper_oilspill_wrapper.py'.
 
-Firstly, Modify arguments in upper_hydro_wrapper.py, for example:
 
-hydro_wrapper.change_param(12,9, 180, 1, 1, 1)  12 SELFE, 2-day's simulation (2+7=9), time step is 180 second, output elev, output wind, output hvel
-hydro_wrapper.change_data_time(12,12,14,2013,12,23,2013)
-hydro_wrapper.timer(15600)
-hydro_wrapper.runSELFE(12,10800)
 
  
         
