@@ -154,9 +154,9 @@ def run_mul_GNOME(number,x,y,yr,month,day,period,dt):
         row.append(i)
     
     row[7]='utm_x='+str(x)+' ; utm_y='+str(y)+'\n'
-    row[77]='    '+'start_time = datetime('+str(yr)+','+str(month)+','+str(day)+',0)'+'\n'
-    row[79]=' '*30+'duration = timedelta(hours='+str(period-1)+'),'+'\n'
-    row[80]=' '*30+'time_step ='+str(dt)+','+'\n'
+    row[88]='    '+'start_time = datetime('+str(yr)+','+str(month)+','+str(day)+',0)'+'\n'
+    row[90]=' '*30+'duration = timedelta(hours='+str(period-1)+'),'+'\n'
+    row[91]=' '*30+'time_step ='+str(dt)+','+'\n'
     
     for j in range(number):
         
