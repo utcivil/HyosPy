@@ -64,11 +64,22 @@ def utmToLatLng(zone, easting, northing, northernHemisphere=True):
 
 
 from datetime import datetime, timedelta
-import gnome
-from gnome.utilities.remote_data import get_datafile
+from urllib2 import HTTPError
+import numpy
+np = numpy
 from gnome import scripting
+from gnome.basic_types import datetime_value_2d
+from gnome.utilities.remote_data import get_datafile
+from gnome.model import Model
+from gnome.map import MapFromBNA
+from gnome.environment import Wind
+from gnome.spill import point_line_release_spill
+from gnome.movers import RandomMover, WindMover, GridCurrentMover
+from gnome.outputters import Renderer
+from gnome.outputters import NetCDFOutput
 
-# define base directory 
+
+# define base directory
 
 base_dir = os.path.dirname(__file__)
 
@@ -76,7 +87,7 @@ def make_model(images_dir=os.path.join(base_dir,"images")):
     print "initializing the model"
 
     start_time = datetime(2013, 7, 23, 0)
-    model = gnome.model.Model(start_time = start_time,
+    model = Model(start_time = start_time,
                               duration = timedelta(hours=47),	# n+1 of data in file
                               time_step = 900, # 4 hr in seconds
                               uncertain = False,
@@ -84,24 +95,22 @@ def make_model(images_dir=os.path.join(base_dir,"images")):
     
     mapfile = os.path.join(base_dir, './coast.bna')
     print "adding the map"
-    model.map = gnome.map.MapFromBNA(mapfile,
-                                     refloat_halflife=6, #hours
-                                     )
+    gnome_map = MapFromBNA(mapfile, refloat_halflife=6)  # hours
     
     print "adding renderer" 
-    renderer = gnome.renderer.Renderer(mapfile, images_dir, size=(1800, 1600))
-
-    model.outputters += renderer
+    model.outputters += Renderer(mapfile, images_dir, size=(1800, 1600))
 
     print "adding a wind mover from a time-series"
     ## this is wind
     wind_file=get_datafile(os.path.join(base_dir, 'wind.WND'))
-    model.movers += gnome.movers.wind_mover_from_file(wind_file)
+    wind = Wind(filename=wind_file)
+    w_mover = WindMover(wind)
+    model.movers += w_mover
     
     print "adding a current mover:"
     ## this is currents
     curr_file = get_datafile(os.path.join(base_dir, 'current.txt'))
-    model.movers += gnome.movers.GridCurrentMover(curr_file)
+    model.movers += GridCurrentMover(curr_file)
 
     ##
     ## Add some spills (sources of elements)
@@ -111,7 +120,7 @@ def make_model(images_dir=os.path.join(base_dir,"images")):
     for i in range(len(coor)):
         
         aaa=utmToLatLng(14,coor[i][0],coor[i][1],northernHemisphere=True)
-        model.spills += gnome.spill.PointSourceSurfaceRelease(num_elements=1,
+        model.spills += point_line_release_spill(num_elements=1,
                                                 start_position = (aaa[1],aaa[0], 0.0),
                                                 release_time = start_time,
                                                 )
@@ -119,8 +128,7 @@ def make_model(images_dir=os.path.join(base_dir,"images")):
     print "adding netcdf output"
     netcdf_output_file = os.path.join(base_dir,'GNOME_output.nc')
     scripting.remove_netcdf(netcdf_output_file)
-    model.outputters += gnome.netcdf_outputter.NetCDFOutput(netcdf_output_file,
-                                                             all_data=True)
+    model.outputters += NetCDFOutput(netcdf_output_file, which_data='all')
 
     return model
 
