@@ -15,8 +15,8 @@ Created on Sun Jul 21 20:24:45 2013
 ## because of model a 7 days model spin-up (7 more days hindcasts), the data start time should be 7 days less than the model simulation start time
 timeperiod=['start:','07','14','2013','end:','07','23','2013']
 
-####### Wind ##########
-# Download wind forecast data from "http://seawater.tamu.edu/tglopu/twdb_lc.tar" and save it at "D:/twdb_1c.tar".
+####### Wind #########
+# Download wind forecast data from "http://seawater.tamu.edu/tglopu/twdb_lc.tar" and save it at "wind/twdb_1c.tar".
 import os
 dire=os.path.dirname(__file__)
 import urllib
@@ -38,7 +38,7 @@ if os.path.isfile(dire+'wind/twdb_1c.tar'):
    with closing(tarfile.open(dire+'wind/twdb_1c.tar','r')) as t:
         t.extractall(dire+'wind/wind_data')
 
-# Step one to create wind.th--delet the first few lines of twdb051.wndq file and save it as wind1.th
+# Step one to create wind.th---delet the first few lines of twdb051.wndq file and save it as wind1.th
 
 string1='*'
 a=open(dire+'wind/wind_data/twdb051.wndq', 'r').readlines()   # read file in lines
@@ -97,7 +97,7 @@ for i in (row000):
     k='   '.join([str(j) for j in i])
     ff.write(k+'\n')
 ff.close
-ff.close    
+   
 
 # Step two of create wind.th---delet the first few useless columns of wind1.th and save it in the list 'row'
 
@@ -144,7 +144,7 @@ for i in (winds):
     f.write(k+'\n')
 f.close
 
-import shutil
+#import shutil
 # shutil.rmtree(dire+'wind') # whether or not to remove the raw data
 
 ####### Tide #########
@@ -198,11 +198,11 @@ for m in range(len(row)):
      
 sum=0
 for n in range(len(row),len(row)-30,-1):
+    if row[n-1][0]== 'RM': row[n-1][0] = row[n-1][1]
     aa=string.atof(row[n-1][0]);bb=string.atof(row[n-1][1])
     diff=aa-bb
     sum=sum+diff
 x=sum/len(row)
-
 # re-open elev.txt to edit it into selfe input
 
 file1 = open(dire+'tide/elev.txt','r')
@@ -379,6 +379,5 @@ flux_th.close
 
 import subprocess
 subprocess.Popen('./run.sh',shell=False)
-
 
 
